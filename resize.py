@@ -13,7 +13,7 @@ def resize(folder,size=size):
 	count = 0
 	for f in files:
 		count+=1
-		print(count+" of "+total_count, end='\r', flush=True)
+		print(str(count)+" of "+str(total_count), end='\r', flush=True)
 		im = Image.open(folder+f)
 		im=im.convert("L")
 		im.thumbnail(size)
