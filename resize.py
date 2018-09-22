@@ -7,7 +7,7 @@ def list_files(folder):
 	files= os.listdir(folder)
 	return files
 
-def resize(folder,size=size):
+def resize(folder, output_folder, size=size):
 	files = list_files(folder)
 	total_count = len(files)
 	count = 0
@@ -17,9 +17,7 @@ def resize(folder,size=size):
 		im = Image.open(folder+f)
 		im=im.convert("L")
 		im.thumbnail(size)
-		path="new/"+f
+		path=output_folder+f
 		im.save(path)
-		if count==100:
-			break
 
-resize("../GRP64/images_training_rev1/images_training_rev1/")
+resize("images_training_rev1/images_training_rev1/","resized_images/")
