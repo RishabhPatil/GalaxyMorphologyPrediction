@@ -45,10 +45,14 @@ def write_output(output_file, input_folder, label_file, size):
         im=Image.open(input_folder+i)
         pix = im.load()
         x,y=im.size
-        data='\n'+str(i.replace('.jpg',''))+','+str(label[int(i.replace('.jpg',''))])+","
+        ## Without rotation use this
+        # data='\n'+str(i.replace('.jpg',''))+','+str(label[int(i.replace('.jpg',''))])+","
+        ## With Rotation
+        ## Rotated images are of the form IMGID_RotationNo.jpg
+        data='\n'+str(i.split('_')[0])+','+str(label[int(i.split('_')[0])])+","
         for j in range(0,x*y):
             data+=str(pix[j/x,j%x])+','
         with open(output_file,'a') as f:
             f.write(data[:-1])
 
-write_output("output.csv", "new/", 'training_solutions_rev1.csv', 28)
+write_output("output_l_rotated.csv", "l_rotated_images/", 'training_solutions_rev1.csv', 28)
