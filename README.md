@@ -1,7 +1,7 @@
 # GalaxyMorphologyPrediction
 
 Final year (Senior year) project during my undergraduate degree<br />
-Classification of galaxies into 37 classes for  using.
+Classification of galaxies into 37 classes falling under 11 questions.
 
 Inspired by this paper: https://arxiv.org/abs/1503.07077<br />
 Kaggle Competition: https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge
