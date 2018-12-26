@@ -1,4 +1,5 @@
 from tkinter import *
+from Tkinter import MainWindow 
 from PIL import Image,ImageTk
 import os
 import matplotlib.pyplot as plt
@@ -6,7 +7,7 @@ import numpy
 import sys
 import gc
 import time
-from hello_4 import MainWindow
+# from hello_4 import MainWindow
 gc.enable()
 
 def crop(x1,x2,y1,y2,filename,im,count):
@@ -18,7 +19,7 @@ def crop(x1,x2,y1,y2,filename,im,count):
         if c1+(i/2)==423 or c1-(i/2)==0 or c2+(i/2)==423 or c2-(i/2)==0:
             break
     #print i
-        im.crop((c1-(i/2),c2-(i/2),c1+(i/2),c2+(i/2))).save("crops/"+filename+'_crop_'+str(2)+'.png')
+        # im.crop((c1-(i/2),c2-(i/2),c1+(i/2),c2+(i/2))).save("crops/"+filename+'_crop_'+str(2)+'.png')
         # os.remove("../images_training_rev1/"+filename)
     # print "Saving:",filename+'_crop_'+str(count)+'.png'
 

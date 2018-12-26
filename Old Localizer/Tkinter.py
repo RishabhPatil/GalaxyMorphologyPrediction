@@ -1,6 +1,7 @@
 from tkinter import *
 import numpy as np
-from PIL import Image,ImageTk
+from PIL import Image
+from PIL import ImageTk
 import time
 import copy
 
